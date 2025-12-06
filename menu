@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Latina House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="Latina House" class="logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="contact.html">Contact & Réservations</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1 class="page-title">Notre Menu</h1>
+            <p class="page-subtitle">Une symphonie de saveurs latino-américaines</p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <section class="menu-navigation">
+        <div class="container">
+            <ul class="menu-categories">
+                <li><a href="#entrees">Entrées</a></li>
+                <li><a href="#plats">Plats Principaux</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#boissons">Boissons</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Entrées Section -->
+    <section class="menu-section" id="entrees">
+        <div class="container">
+            <h2 class="menu-section-title">Entrées</h2>
+            <div class="divider"></div>
+            
+            <div class="menu-items">
+                <!-- Item with 3D Model -->
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Ceviche Royale</h3>
+                        <span class="item-price">€32</span>
+                    </div>
+                    <p class="item-description">Thon rouge mariné au citron vert, fruits de la passion, piment habanero, coriandre fraîche et chips de plantain</p>
+                    
+                    <!-- Google Model Viewer for 3D Object -->
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="YOUR_CEVICHE_GLB_LINK_HERE" 
+                            alt="Ceviche Royale 3D Model"
+                            auto-rotate 
+                            camera-controls 
+                            shadow-intensity="1"
+                            exposure="1"
+                            environment-image="neutral"
+                            style="width: 100%; height: 300px;">
+                            <div class="model-placeholder" slot="poster">
+                                <i class="fas fa-pepper-hot"></i>
+                                <p>Chargement du modèle 3D...</p>
+                            </div>
+                        </model-viewer>
+                        <p class="model-caption">Visualisez notre plat en 3D</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Empanadas Argentinas</h3>
+                        <span class="item-price">€18</span>
+                    </div>
+                    <p class="item-description">Pâte feuilletée maison farcie au bœuf wagyu, olives, œufs et épices, servie avec chimichurri</p>
+                    
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="YOUR_EMPANADAS_GLB_LINK_HERE" 
+                            alt="Empanadas 3D Model"
+                            auto-rotate 
+                            camera-controls 
+                            shadow-intensity="1"
+                            exposure="1"
+                            style="width: 100%; height: 300px;">
+                            <div class="model-placeholder" slot="poster">
+                                <i class="fas fa-drumstick-bite"></i>
+                                <p>Chargement du modèle 3D...</p>
+                            </div>
+                        </model-viewer>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Guacamole Artisanal</h3>
+                        <span class="item-price">€16</span>
+                    </div>
+                    <p class="item-description">Avocats Hass, oignon rouge, coriandre, piment jalapeño, tomate cerise et tortillas maison</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plats Principaux Section -->
+    <section class="menu-section" id="plats">
+        <div class="container">
+            <h2 class="menu-section-title">Plats Principaux</h2>
+            <div class="divider"></div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Poulet Mole Negro</h3>
+                        <span class="item-price">€28</span>
+                    </div>
+                    <p class="item-description">Suprême de poulet, sauce mole au cacao artisanal, sésame grillé, riz sauvage et haricots noirs</p>
+                    
+                    <div class="model-viewer-container">
+                        <model-viewer 
+                            src="YOUR_MOLE_GLB_LINK_HERE" 
+                            alt="Poulet Mole 3D Model"
+                            auto-rotate 
+                            camera-controls 
+                            shadow-intensity="1"
+                            exposure="1"
+                            style="width: 100%; height: 300px;">
+                            <div class="model-placeholder" slot="poster">
+                                <i class="fas fa-utensils"></i>
+                                <p>Chargement du modèle 3D...</p>
+                            </div>
+                        </model-viewer>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Asado de Tira</h3>
+                        <span class="item-price">€38</span>
+                    </div>
+                    <p class="item-description">Côte de bœuf argentine grillée au bois de chêne, purée de manioc et légumes grillés</p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Pescado a la Veracruzana</h3>
+                        <span class="item-price">€34</span>
+                    </div>
+                    <p class="item-description">Filet de dorade royale, sauce tomate aux olives, câpres et piments, riz basmati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section class="menu-section" id="desserts">
+        <div class="container">
+            <h2 class="menu-section-title">Desserts</h2>
+            <div class="divider"></div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Tres Leches</h3>
+                        <span class="item-price">€12</span>
+                    </div>
+                    <p class="item-description">Gâteau imbibé de trois laits, fruits rouges, crème chantilly et zeste de citron vert</p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Churros Artisanaux</h3>
+                        <span class="item-price">€10</span>
+                    </div>
+                    <p class="item-description">Churros croustillants, chocolat chaud épais à l'ancienne et glace vanille de Madagascar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boissons Section -->
+    <section class="menu-section" id="boissons">
+        <div class="container">
+            <h2 class="menu-section-title">Boissons Signature</h2>
+            <div class="divider"></div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Pisco Sour Signature</h3>
+                        <span class="item-price">€14</span>
+                    </div>
+                    <p class="item-description">Pisco premium, jus de citron vert, sirop d'angostura, blanc d'œuf et amertume</p>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 class="item-title">Margarita de Agave</h3>
+                        <span class="item-price">€13</span>
+                    </div>
+                    <p class="item-description">Tequila reposado, triple sec, jus de citron vert et sirop d'agave</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Pairing Section -->
+    <section class="wine-pairing">
+        <div class="container">
+            <h2 class="section-title">Accords Mets & Vins</h2>
+            <div class="divider"></div>
+            <div class="pairing-grid">
+                <div class="pairing-item">
+                    <h3>Viandes Rouges</h3>
+                    <p>Malbec Argentin - Catena Zapata</p>
+                    <p class="pairing-price">€45 / bouteille</p>
+                </div>
+                <div class="pairing-item">
+                    <h3>Poissons & Fruits de Mer</h3>
+                    <p>Sauvignon Blanc Chilien - Casa Lapostolle</p>
+                    <p class="pairing-price">€38 / bouteille</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Latina House" class="logo">
+                    <p>L'élégance culinaire d'Amérique Latine</p>
+                </div>
+                <div class="footer-info">
+                    <h3>Horaires</h3>
+                    <p>Mardi - Dimanche: 19h - 23h</p>
+                    <p>Samedi - Dimanche déjeuner: 12h - 15h</p>
+                    <p>Lundi: Fermé</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>123 Avenue de la Gastronomie</p>
+                    <p>75008 Paris, France</p>
+                    <p>01.23.45.67.89</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <p class="copyright">© 2024 Latina House. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Latina House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="logo.png" alt="Latina House" class="logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html" class="active">Contact & Réservations</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1 class="page-title">Contact & Réservations</h1>
+            <p class="page-subtitle">Notre équipe est à votre écoute pour toute demande</p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <!-- Contact & Reservation Form -->
+    <section class="contact-container">
+        <div class="container">
+            <div class="contact-info">
+                <h2 class="section-title">Informations</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Adresse</h3>
+                        <p>123 Avenue de la Gastronomie</p>
+                        <p>75008 Paris, France</p>
+                    </div>
+                </div>
+                
+                <!-- Google Maps Embed -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Localisation</h3>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1648045871405!5m2!1sfr!2sfr" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Téléphones</h3>
+                        <p>01.23.45.67.89</p>
+                        <p>06.12.34.56.78</p>
+                        <p class="hours-info">Du mardi au dimanche, 10h-18h</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>contact@latinahouse.com</p>
+                        <p>reservations@latinahouse.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Horaires</h3>
+                        <p><strong>Déjeuner:</strong> Samedi - Dimanche: 12h - 15h</p>
+                        <p><strong>Dîner:</strong> Mardi - Dimanche: 19h - 23h</p>
+                        <p><em>Fermé le lundi</em></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Informations importantes</h3>
+                        <p>Réservation recommandée, surtout les week-ends.</p>
+                        <p>Code vestimentaire: Chic décontracté.</p>
+                        <p>Pour les annulations, prévenez 48h à l'avance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reservation-form">
+                <h2 class="section-title">Formulaire de Réservation</h2>
+                <p class="form-subtitle">Pour toute réservation, complétez le formulaire ci-dessous.</p>
+                
+                <form id="reservationForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required placeholder="01.23.45.67.89">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date souhaitée *</label>
+                        <input type="date" id="date" name="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Heure souhaitée *</label>
+                        <select id="time" name="time" class="form-control" required>
+                            <option value="">Sélectionnez une heure</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Nombre de personnes *</label>
+                        <select id="guests" name="guests" class="form-control" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
+                            <option value="7">7 personnes</option>
+                            <option value="8">8 personnes</option>
+                            <option value="9">9 personnes ou plus</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="occasion">Occasion spéciale</label>
+                        <select id="occasion" name="occasion" class="form-control">
+                            <option value="">Sélectionnez une occasion</option>
+                            <option value="anniversaire">Anniversaire</option>
+                            <option value="date">Dîner romantique</option>
+                            <option value="business">Repas d'affaires</option>
+                            <option value="family">Repas familial</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Demandes particulières</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Allergies, préférences alimentaires..."></textarea>
+                    </div>
+                    
+                    <div class="form-notification" id="formNotification">
+                        <i class="fas fa-info-circle"></i>
+                        <span id="notificationText"></span>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Envoyer la réservation
+                    </button>
+                    
+                    <p class="form-note">
+                        Vous recevrez une confirmation par email dans les 24 heures.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Events Section -->
+    <section class="private-events">
+        <div class="container">
+            <h2 class="section-title">Événements Privés</h2>
+            <div class="divider"></div>
+            <div class="events-content">
+                <p>Latina House propose ses espaces pour vos événements privés : mariages, anniversaires, repas d'affaires.</p>
+                <p>Notre équipe d'événementiel est à votre disposition pour créer une expérience sur mesure.</p>
+                <a href="mailto:events@latinahouse.com" class="btn btn-secondary">
+                    <i class="fas fa-calendar-alt"></i> Demander un devis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Latina House" class="logo">
+                    <p>L'élégance culinaire d'Amérique Latine</p>
+                </div>
+                <div class="footer-info">
+                    <h3>Horaires</h3>
+                    <p>Mardi - Dimanche: 19h - 23h</p>
+                    <p>Samedi - Dimanche déjeuner: 12h - 15h</p>
+                    <p>Lundi: Fermé</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>123 Avenue de la Gastronomie</p>
+                    <p>75008 Paris, France</p>
+                    <p>01.23.45.67.89</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+            <p class="copyright">© 2024 Latina House. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

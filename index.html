@@ -3,147 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latina House - Restaurant Gastronomique</title>
+    <title>Latina House</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-latina.css">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <div class="logo-container">
-                <a href="index.html">
-                    <img src="logo.JPG" alt="Latina House" class="logo">
+                <a href="index-latina.html">
+                    <!-- Replace with your Latina House logo -->
+                    <img src="logo-latina.png" alt="Latina House" class="logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Accueil</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact & Réservations</a></li>
+                    <li><a href="index-latina.html" class="active">Accueil</a></li>
+                    <li><a href="menu-latina.html">Menu</a></li>
+                    <li><a href="contact-latina.html">Contact & Réservations</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Latina House</h1>
-                <p class="hero-subtitle">L'élégance culinaire d'Amérique Latine</p>
-                <div class="divider"></div>
-                <p class="hero-description">Une expérience gastronomique où les saveurs vibrantes rencontrent l'art de la présentation</p>
-                <a href="menu.html" class="btn btn-primary">Découvrir notre menu</a>
+            <h1 class="text-gold">Bienvenue à <span style="font-style: italic;">Latina House</span></h1>
+            <p>Un lieu d'exception où la cuisine latine rencontre l'élégance. Découvrez une expérience gastronomique unique.</p>
+            <div class="divider"></div>
+            <div class="hero-btns">
+                <a href="menu-latina.html" class="btn">Découvrir notre menu</a>
+                <a href="contact-latina.html" class="btn btn-gold">Réserver une table</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Notre Histoire</h2>
-                <div class="divider"></div>
-            </div>
+    <section class="about">
+        <div class="container" style="display: flex; align-items: center; gap: 80px;">
+            <div class="about-img" style="background-image: url('latina-restaurant.jpg');"></div>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Fondée en 2010, Latina House incarne l'essence raffinée de la cuisine latino-américaine. Notre chef, María Rodríguez, puise son inspiration dans les traditions familiales et les marchés colorés de son Mexique natal.</p>
-                    <p>Chaque plat est une œuvre d'art, où les ingrédients d'exception se marient dans une symphonie de saveurs authentiques et contemporaines.</p>
-                    <p>Notre engagement envers l'excellence se reflète dans chaque détail, de la sélection des produits à la présentation artistique.</p>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-utensils"></i>
-                        <p>Notre salle à manger élégante</p>
+                <h2 class="text-gold">Notre Histoire</h2>
+                <p>Latina House, situé au cœur de la ville, incarne l'excellence de la cuisine latine avec une touche contemporaine.</p>
+                <p>Notre établissement accueille des convives séduits par notre approche unique de la gastronomie latine.</p>
+                <p>Chaque plat est une célébration des saveurs latines, chaque ingrédient soigneusement sélectionné.</p>
+                
+                <!-- NEW SECTION: Votre maison latine -->
+                <div style="margin-top: 50px; padding-top: 50px; border-top: 2px solid rgba(139, 115, 85, 0.2);">
+                    <div style="margin-bottom: 30px;">
+                        <h3 class="text-gold" style="font-size: 2.2rem; margin-bottom: 15px; position: relative; padding-bottom: 15px; display: inline-block;">
+                            Votre maison latine
+                            <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: #8b7355;"></span>
+                        </h3>
+                    </div>
+                    
+                    <div style="text-align: center; margin: 30px 0;">
+                        <img src="latina-interior.jpg" alt="Latina House" style="width: 100%; max-width: 500px; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(74, 60, 42, 0.1);">
                     </div>
                 </div>
+                
+                <a href="contact-latina.html" class="btn" style="margin-top: 30px;">En savoir plus</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Dishes -->
-    <section class="featured-dishes">
+    <!-- Features -->
+    <section class="features">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Spécialités Maison</h2>
-                <p>Découvrez nos créations signature</p>
-                <div class="divider"></div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Cuisine Latine</h3>
+                <p>Notre chef réinvente la gastronomie latine avec créativité et respect des traditions.</p>
             </div>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-pepper-hot"></i>
-                        </div>
-                    </div>
-                    <div class="dish-info">
-                        <h3>Ceviche Royale</h3>
-                        <p>Thon rouge, fruits de la passion, piment habanero, coriandre fraîche</p>
-                        <span class="dish-price">€32</span>
-                    </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-wine-glass-alt"></i>
                 </div>
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-drumstick-bite"></i>
-                        </div>
-                    </div>
-                    <div class="dish-info">
-                        <h3>Poulet Mole Negro</h3>
-                        <p>Sauce au cacao artisanal, sésame grillé, riz sauvage</p>
-                        <span class="dish-price">€28</span>
-                    </div>
-                </div>
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-cocktail"></i>
-                        </div>
-                    </div>
-                    <div class="dish-info">
-                        <h3>Pisco Sour Signature</h3>
-                        <p>Pisco premium, jus de citron vert, sirop d'angostura, blanc d'œuf</p>
-                        <span class="dish-price">€14</span>
-                    </div>
-                </div>
+                <h3>Bar Latin</h3>
+                <p>Sélection soigneuse de cocktails et vins pour accompagner parfaitement chaque plat.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Ils parlent de nous</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Une expérience culinaire extraordinaire. Le ceviche est une révélation!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Sophie Martin</h4>
-                        <p>Le Monde Culinaire</p>
-                    </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-gem"></i>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"L'ambiance, le service, et surtout la cuisine : tout est parfait."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Antoine Dubois</h4>
-                        <p>Food & Wine Magazine</p>
-                    </div>
-                </div>
+                <h3>Ambiance Latino</h3>
+                <p>Décor raffiné mêlant design contemporain et éléments latins pour une expérience sensorielle complète.</p>
             </div>
         </div>
     </section>
@@ -151,33 +102,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Latina House" class="logo">
-                    <p>L'élégance culinaire d'Amérique Latine</p>
-                </div>
-                <div class="footer-info">
-                    <h3>Horaires</h3>
-                    <p>Mardi - Dimanche: 19h - 23h</p>
-                    <p>Samedi - Dimanche déjeuner: 12h - 15h</p>
-                    <p>Lundi: Fermé</p>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact</h3>
-                    <p>123 Avenue de la Gastronomie</p>
-                    <p>75008 Paris, France</p>
-                    <p>01.23.45.67.89</p>
-                </div>
-            </div>
             <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                <a href="https://www.instagram.com/latinahouse" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
-            <p class="copyright">© 2024 Latina House. Tous droits réservés.</p>
+            <p class="copyright">© 2025 Latina House. Tous droits réservés.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

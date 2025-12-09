@@ -4,278 +4,2191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Latina House</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-latina.css">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <div class="logo-container">
-                <a href="index.html">
-                    <img src="logo.JPG" alt="Latina House" class="logo">
+                <a href="index-latina.html">
+                    <img src="logo-latina.png" alt="Latina House" class="logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="menu.html" class="active">Menu</a></li>
-                    <li><a href="contact.html">Contact & Réservations</a></li>
+                    <li><a href="index-latina.html">Accueil</a></li>
+                    <li><a href="menu-latina-full.html" class="active">Menu</a></li>
+                    <li><a href="contact-latina.html">Contact & Réservations</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
     <!-- Menu Header -->
     <section class="menu-header">
         <div class="container">
-            <h1 class="page-title">Notre Menu</h1>
-            <p class="page-subtitle">Une symphonie de saveurs latino-américaines</p>
-            <div class="divider"></div>
-        </div>
-    </section>
-
-    <!-- Menu Navigation -->
-    <section class="menu-navigation">
-        <div class="container">
-            <ul class="menu-categories">
-                <li><a href="#entrees">Entrées</a></li>
-                <li><a href="#plats">Plats Principaux</a></li>
-                <li><a href="#desserts">Desserts</a></li>
-                <li><a href="#boissons">Boissons</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Entrées Section -->
-    <section class="menu-section" id="entrees">
-        <div class="container">
-            <h2 class="menu-section-title">Entrées</h2>
+            <h1 class="text-gold">Notre Menu</h1>
+            <p>Découvrez nos créations latines, où chaque plat est une célébration des saveurs</p>
             <div class="divider"></div>
             
-            <div class="menu-items">
-                <!-- Item with 3D Model -->
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Ceviche Royale</h3>
-                        <span class="item-price">€32</span>
-                    </div>
-                    <p class="item-description">Thon rouge mariné au citron vert, fruits de la passion, piment habanero, coriandre fraîche et chips de plantain</p>
-                    
-                    <!-- Google Model Viewer for 3D Object -->
-                    <div class="model-viewer-container">
-                        <model-viewer 
-                            src="YOUR_CEVICHE_GLB_LINK_HERE" 
-                            alt="Ceviche Royale 3D Model"
-                            auto-rotate 
-                            camera-controls 
-                            shadow-intensity="1"
-                            exposure="1"
-                            environment-image="neutral"
-                            style="width: 100%; height: 300px;">
-                            <div class="model-placeholder" slot="poster">
-                                <i class="fas fa-pepper-hot"></i>
-                                <p>Chargement du modèle 3D...</p>
-                            </div>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Tout voir</button>
+                <button class="category-btn" data-category="entrees-froides">Entrées Froides</button>
+                <button class="category-btn" data-category="entrees-chaudes">Entrées Chaudes</button>
+                <button class="category-btn" data-category="menu-enfant">Menu Enfant</button>
+                <button class="category-btn" data-category="plats">Plats</button>
+                <button class="category-btn" data-category="poissons">Poissons</button>
+                <button class="category-btn" data-category="traditionnel">Traditionnel</button>
+                <button class="category-btn" data-category="grillades">Grillades</button>
+                <button class="category-btn" data-category="risottos">Risottos</button>
+                <button class="category-btn" data-category="pastas">Pastas</button>
+                <button class="category-btn" data-category="pizza">Pizza</button>
+                <button class="category-btn" data-category="snacks">Snacks</button>
+                <button class="category-btn" data-category="crepes">Crêpes & Gaufres</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Sections - HORIZONTAL LAYOUT -->
+    <section class="menu-sections-horizontal">
+        <div class="container">
+            <!-- Row 1: Entrées Froides & Entrées Chaudes -->
+            <div class="menu-section" data-category="entrees-froides">
+                <div class="section-header">
+                    <h2 class="section-title">Entrées Froides</h2>
+                </div>
+                
+                <div class="dish" data-dish="bruschetta">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Bruschetta.glb"
+                            alt="Bruschetta"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
                         </model-viewer>
-                        <p class="model-caption">Visualisez notre plat en 3D</p>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bruschetta</h3>
+                            <div class="dish-price">850 DA</div>
+                        </div>
+                        <p class="dish-desc">Pain grillé aux tomates fraîches, basilic et huile d'olive</p>
                     </div>
                 </div>
                 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Empanadas Argentinas</h3>
-                        <span class="item-price">€18</span>
-                    </div>
-                    <p class="item-description">Pâte feuilletée maison farcie au bœuf wagyu, olives, œufs et épices, servie avec chimichurri</p>
-                    
-                    <div class="model-viewer-container">
-                        <model-viewer 
-                            src="YOUR_EMPANADAS_GLB_LINK_HERE" 
-                            alt="Empanadas 3D Model"
-                            auto-rotate 
-                            camera-controls 
-                            shadow-intensity="1"
-                            exposure="1"
-                            style="width: 100%; height: 300px;">
-                            <div class="model-placeholder" slot="poster">
-                                <i class="fas fa-drumstick-bite"></i>
-                                <p>Chargement du modèle 3D...</p>
-                            </div>
+                <div class="dish" data-dish="salade-cesar">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Ce%CC%81sar%20.glb"
+                            alt="Salade César"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
                         </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salade César</h3>
+                            <div class="dish-price">1250 DA</div>
+                        </div>
+                        <p class="dish-desc">Laitue romaine, croûtons, parmesan et sauce césar</p>
                     </div>
                 </div>
                 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Guacamole Artisanal</h3>
-                        <span class="item-price">€16</span>
-                    </div>
-                    <p class="item-description">Avocats Hass, oignon rouge, coriandre, piment jalapeño, tomate cerise et tortillas maison</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Plats Principaux Section -->
-    <section class="menu-section" id="plats">
-        <div class="container">
-            <h2 class="menu-section-title">Plats Principaux</h2>
-            <div class="divider"></div>
-            
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Poulet Mole Negro</h3>
-                        <span class="item-price">€28</span>
-                    </div>
-                    <p class="item-description">Suprême de poulet, sauce mole au cacao artisanal, sésame grillé, riz sauvage et haricots noirs</p>
-                    
-                    <div class="model-viewer-container">
-                        <model-viewer 
-                            src="YOUR_MOLE_GLB_LINK_HERE" 
-                            alt="Poulet Mole 3D Model"
-                            auto-rotate 
-                            camera-controls 
-                            shadow-intensity="1"
-                            exposure="1"
-                            style="width: 100%; height: 300px;">
-                            <div class="model-placeholder" slot="poster">
-                                <i class="fas fa-utensils"></i>
-                                <p>Chargement du modèle 3D...</p>
-                            </div>
+                <div class="dish" data-dish="salade-nicoise">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Nicoise.glb"
+                            alt="Salade Niçoise"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
                         </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salade Niçoise</h3>
+                            <div class="dish-price">1300 DA</div>
+                        </div>
+                        <p class="dish-desc">Thon, œufs, tomates, olives, haricots verts et pommes de terre</p>
                     </div>
                 </div>
                 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Asado de Tira</h3>
-                        <span class="item-price">€38</span>
+                <div class="dish" data-dish="salade-poulet-pomme">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Poulet.glb"
+                            alt="Salade de poulet pomme et noix"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
                     </div>
-                    <p class="item-description">Côte de bœuf argentine grillée au bois de chêne, purée de manioc et légumes grillés</p>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salade de poulet pomme et noix</h3>
+                            <div class="dish-price">1400 DA</div>
+                        </div>
+                        <p class="dish-desc">Poulet grillé, pommes croquantes et noix caramélisées</p>
+                    </div>
                 </div>
                 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Pescado a la Veracruzana</h3>
-                        <span class="item-price">€34</span>
+                <div class="dish" data-dish="salade-mimosa">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Mimosa.glb"
+                            alt="Salade Mimosa aux crevettes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
                     </div>
-                    <p class="item-description">Filet de dorade royale, sauce tomate aux olives, câpres et piments, riz basmati</p>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salade Mimosa aux crevettes</h3>
+                            <div class="dish-price">1600 DA</div>
+                        </div>
+                        <p class="dish-desc">Crevettes, œufs mimosa et légumes frais</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="buratta">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burrata.glb"
+                            alt="Buratta aux fruits de saison"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Buratta aux fruits de saison & pesto pistache</h3>
+                            <div class="dish-price">1800 DA</div>
+                        </div>
+                        <p class="dish-desc">Fromage buratta crémeux avec fruits frais et pesto pistache</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="salade-rose-beef">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Rose%20Beef.glb"
+                            alt="Salade Rose Beef"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salade Rose Beef</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Viande de bœuf marinée, roquette et parmesan</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="salade-avocats">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Salade%20Avocat.glb"
+                            alt="Salade Trio d'avocats"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salade Trio d'avocats</h3>
+                            <div class="dish-price">1550 DA</div>
+                        </div>
+                        <p class="dish-desc">Trois préparations différentes d'avocat</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="plateau-fromages">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plateau%20Fromage.glb"
+                            alt="Plateau de fromages affinés"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Plateau de fromages affinés</h3>
+                            <div class="dish-price">2200 DA</div>
+                        </div>
+                        <p class="dish-desc">Sélection de fromages affinés accompagnés de noix et fruits</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Desserts Section -->
-    <section class="menu-section" id="desserts">
-        <div class="container">
-            <h2 class="menu-section-title">Desserts</h2>
-            <div class="divider"></div>
             
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Tres Leches</h3>
-                        <span class="item-price">€12</span>
-                    </div>
-                    <p class="item-description">Gâteau imbibé de trois laits, fruits rouges, crème chantilly et zeste de citron vert</p>
+            <div class="menu-section" data-category="entrees-chaudes">
+                <div class="section-header">
+                    <h2 class="section-title">Entrées Chaudes</h2>
                 </div>
                 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Churros Artisanaux</h3>
-                        <span class="item-price">€10</span>
+                <div class="dish" data-dish="harrira">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Harrira.glb"
+                            alt="Harrira Tlemcenienne"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
                     </div>
-                    <p class="item-description">Churros croustillants, chocolat chaud épais à l'ancienne et glace vanille de Madagascar</p>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Harrira Tlemcenienne</h3>
+                            <div class="dish-price">800 DA</div>
+                        </div>
+                        <p class="dish-desc">Soupe traditionnelle aux lentilles et viande</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="felfel">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Felfel.glb"
+                            alt="Felfel maison"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Felfel maison</h3>
+                            <div class="dish-price">850 DA</div>
+                        </div>
+                        <p class="dish-desc">Poivrons farcis à la viande hachée</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="bourek">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Bourek.glb"
+                            alt="Bourek viande hachée"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bourek viande hachée (3pieces)</h3>
+                            <div class="dish-price">950 DA</div>
+                        </div>
+                        <p class="dish-desc">Feuilles de brick farcies à la viande hachée épicée</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="cigare-crevettes">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Cigare%20Crevette.glb"
+                            alt="Cigare de Crevettes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Cigare de Crevettes</h3>
+                            <div class="dish-price">1200 DA</div>
+                        </div>
+                        <p class="dish-desc">Crevettes enrobées de feuille de brick croustillante</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="bastilla">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Bastilla.glb"
+                            alt="Bastilla aux amandes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bastilla aux amandes</h3>
+                            <div class="dish-price">1400 DA</div>
+                        </div>
+                        <p class="dish-desc">Feuilles de warqa farcies au poulet et amandes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="hachis">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Hachis.glb"
+                            alt="Hachis Parmentier"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Hachis Parmentier</h3>
+                            <div class="dish-price">1300 DA</div>
+                        </div>
+                        <p class="dish-desc">Purée de pommes de terre et viande hachée gratinée</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="gratin-poulet">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Gratin%20Poulet.glb"
+                            alt="Gratin de Poulet"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Gratin de Poulet / Viande Hachée</h3>
+                            <div class="dish-price">1500 DA</div>
+                        </div>
+                        <p class="dish-desc">Poulet ou viande hachée gratinée au fromage</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="camembert">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Camembert.glb"
+                            alt="Camembert rôti"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Camembert rôti/ Pané au miel et noix</h3>
+                            <div class="dish-price">1600 DA</div>
+                        </div>
+                        <p class="dish-desc">Fromage camembert doré au miel et noix caramélisées</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="arancinis">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Arancinis.glb"
+                            alt="Arancinis aux crevettes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Arancinis aux crevettes</h3>
+                            <div class="dish-price">1700 DA</div>
+                        </div>
+                        <p class="dish-desc">Boulettes de riz farcies aux crevettes et fromage</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Boissons Section -->
-    <section class="menu-section" id="boissons">
-        <div class="container">
-            <h2 class="menu-section-title">Boissons Signature</h2>
-            <div class="divider"></div>
+            <!-- Row 2: Menu Enfant & Plats -->
+            <div class="menu-section" data-category="menu-enfant">
+                <div class="section-header">
+                    <h2 class="section-title">Menu Enfant</h2>
+                </div>
+                
+                <div class="dish" data-dish="mini-burger">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Mini%20Burger.glb"
+                            alt="Mini-burger gourmand"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Mini-burger gourmand</h3>
+                            <div class="dish-price">950 DA</div>
+                        </div>
+                        <p class="dish-desc">Burger miniature avec frites et sauce maison</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="mignardises-poulet">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Mignardises%20Poulet.glb"
+                            alt="Mignardises de poulet"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Mignardises de poulet</h3>
+                            <div class="dish-price">1050 DA</div>
+                        </div>
+                        <p class="dish-desc">Petites bouchées de poulet pané avec sauce dip</p>
+                    </div>
+                </div>
+            </div>
             
-            <div class="menu-items">
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Pisco Sour Signature</h3>
-                        <span class="item-price">€14</span>
-                    </div>
-                    <p class="item-description">Pisco premium, jus de citron vert, sirop d'angostura, blanc d'œuf et amertume</p>
+            <div class="menu-section" data-category="plats">
+                <div class="section-header">
+                    <h2 class="section-title">Plats</h2>
                 </div>
                 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <h3 class="item-title">Margarita de Agave</h3>
-                        <span class="item-price">€13</span>
+                <div class="dish" data-dish="juliens-poulet">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Juliens%20Poulet.glb"
+                            alt="Juliens de poulet à la mexicaine"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
                     </div>
-                    <p class="item-description">Tequila reposado, triple sec, jus de citron vert et sirop d'agave</p>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Juliens de poulet à la mexicaine</h3>
+                            <div class="dish-price">1800 DA</div>
+                        </div>
+                        <p class="dish-desc">Lanières de poulet épicées à la mexicaine</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="supreme-poulet">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Supreme%20Poulet.glb"
+                            alt="Suprême de poulet"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Suprême de poulet</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Haut de cuisse de poulet sauce crémeuse</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="escalope-pane">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Escalope%20Pane.glb"
+                            alt="Escalope pané"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Escalope pané</h3>
+                            <div class="dish-price">1700 DA</div>
+                        </div>
+                        <p class="dish-desc">Escalope de poulet ou veau panée croustillante</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="ballottine-volaille">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Ballottine.glb"
+                            alt="Ballottine de volaille farcie"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Ballottine de volaille farcie</h3>
+                            <div class="dish-price">2100 DA</div>
+                        </div>
+                        <p class="dish-desc">Volaille farcie aux légumes et herbes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="cordon-bleu">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Cordon%20Bleu.glb"
+                            alt="Cordon bleu"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Cordon bleu</h3>
+                            <div class="dish-price">1850 DA</div>
+                        </div>
+                        <p class="dish-desc">Escalope farcie au jambon et fromage</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="foie-de-veau">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Foie%20Veau.glb"
+                            alt="Foie de veau"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Foie de veau</h3>
+                            <div class="dish-price">2200 DA</div>
+                        </div>
+                        <p class="dish-desc">Foie de veau poêlé aux oignons</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="noix-de-veau">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Noix%20Veau.glb"
+                            alt="Noix de veau rôtie"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Noix de veau rôtie</h3>
+                            <div class="dish-price">2500 DA</div>
+                        </div>
+                        <p class="dish-desc">Noix de veau rôtie au romarin</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="souris-agneau">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Souris%20Agneau.glb"
+                            alt="Souris d'agneau"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Souris d'agneau</h3>
+                            <div class="dish-price">2800 DA</div>
+                        </div>
+                        <p class="dish-desc">Souris d'agneau confite aux herbes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="epaule-agneau">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Epaule%20Agneau.glb"
+                            alt="Épaule d'agneau"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Épaule d'agneau</h3>
+                            <div class="dish-price">3000 DA</div>
+                        </div>
+                        <p class="dish-desc">Épaule d'agneau braisée aux légumes</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- Row 3: Poissons & Traditionnel -->
+            <div class="menu-section" data-category="poissons">
+                <div class="section-header">
+                    <h2 class="section-title">Poissons</h2>
+                </div>
+                
+                <div class="dish" data-dish="filet-daurade">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Filet%20Daurade.glb"
+                            alt="Filet de daurade"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Filet de daurade</h3>
+                            <div class="dish-price">2200 DA</div>
+                        </div>
+                        <p class="dish-desc">Filet de daurade grillé au citron</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="calamar-frites">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Calamar%20Frites.glb"
+                            alt="Calamar frites"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Calamar frites</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Calamars frits avec frites maison</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="espadon">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Espadon.glb"
+                            alt="Espadon"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Espadon</h3>
+                            <div class="dish-price">2600 DA</div>
+                        </div>
+                        <p class="dish-desc">Steak d'espadon grillé</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="crevettes-flambees">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crevettes%20Flambees.glb"
+                            alt="Crevettes flambées"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Crevettes flambées</h3>
+                            <div class="dish-price">2400 DA</div>
+                        </div>
+                        <p class="dish-desc">Crevettes flambées au cognac</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="tajine-calamars">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Tajine%20Calamars.glb"
+                            alt="Tajine de calamars"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Tajine de calamars</h3>
+                            <div class="dish-price">2300 DA</div>
+                        </div>
+                        <p class="dish-desc">Calamars mijotés aux légumes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="tajine-espadon">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Tajine%20Espadon.glb"
+                            alt="Tajine d'espadon"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Tajine d'espadon</h3>
+                            <div class="dish-price">2700 DA</div>
+                        </div>
+                        <p class="dish-desc">Espadon mijoté aux olives et citron</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section" data-category="traditionnel">
+                <div class="section-header">
+                    <h2 class="section-title">Menu Traditionnel</h2>
+                </div>
+                
+                <div class="dish" data-dish="seffa">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Seffa.glb"
+                            alt="Seffa au miel"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Seffa au miel</h3>
+                            <div class="dish-price">1600 DA</div>
+                        </div>
+                        <p class="dish-desc">Vermicelles sucrés au miel et amandes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="tajine-poulet">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Tajine%20Poulet.glb"
+                            alt="Tajine de poulet à la marocaine"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Tajine de poulet à la marocaine</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Poulet aux olives et citron confit</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="tajine-foie">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Tajine%20Foie.glb"
+                            alt="Tajine de foie de veau Chermoula"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Tajine de foie de veau Chermoula</h3>
+                            <div class="dish-price">2100 DA</div>
+                        </div>
+                        <p class="dish-desc">Foie de veau mariné au chermoula</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="mhammar">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Mhammar.glb"
+                            alt="M'Hammar"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">M'Hammar</h3>
+                            <div class="dish-price">2300 DA</div>
+                        </div>
+                        <p class="dish-desc">Plat traditionnel de viande marinée</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 4: Grillades & Risottos -->
+            <div class="menu-section" data-category="grillades">
+                <div class="section-header">
+                    <h2 class="section-title">Grillades</h2>
+                </div>
+                
+                <div class="dish" data-dish="chiche-taouk">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Chiche%20Taouk.glb"
+                            alt="Chiche Taouk"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Chiche Taouk</h3>
+                            <div class="dish-price">1800 DA</div>
+                        </div>
+                        <p class="dish-desc">Brochettes de poulet mariné</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="brochette-kebab">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Brochette%20Kebab.glb"
+                            alt="Brochette de Kebab"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Brochette de Kebab</h3>
+                            <div class="dish-price">1700 DA</div>
+                        </div>
+                        <p class="dish-desc">Viande hachée épicée en brochettes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="entrecotes">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Entrecotes.glb"
+                            alt="Entre côtes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Entre côtes</h3>
+                            <div class="dish-price">2800 DA</div>
+                        </div>
+                        <p class="dish-desc">Côte de bœuf grillée</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="cote-agneau">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Cote%20Agneau.glb"
+                            alt="Côte d'agneau"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Côte d'agneau</h3>
+                            <div class="dish-price">3200 DA</div>
+                        </div>
+                        <p class="dish-desc">Côte d'agneau grillée aux herbes</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="mixte-viandes">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Mixte%20Viandes.glb"
+                            alt="Mixte de Viandes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Mixte de Viandes</h3>
+                            <div class="dish-price">3500 DA</div>
+                        </div>
+                        <p class="dish-desc">Assortiment de viandes grillées</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="machaoui">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Machaoui.glb"
+                            alt="Machaoui"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Machaoui (Mélange de viandes)</h3>
+                            <div class="dish-price">3800 DA</div>
+                        </div>
+                        <p class="dish-desc">Grand assortiment de viandes grillées</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section" data-category="risottos">
+                <div class="section-header">
+                    <h2 class="section-title">Risottos</h2>
+                </div>
+                
+                <div class="dish" data-dish="risotto-poulet">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Risotto%20Poulet.glb"
+                            alt="Risotto au poulet indien permesan"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Risotto au poulet indien permesan</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Risotto crémeux au poulet épicé</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="risotto-fromage">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Risotto%20Fromage.glb"
+                            alt="Risotto au fromage permesan"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Risotto au fromage permesan</h3>
+                            <div class="dish-price">1700 DA</div>
+                        </div>
+                        <p class="dish-desc">Risotto crémeux au parmesan</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="risotto-boeuf">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Risotto%20Boeuf.glb"
+                            alt="Risotto au bœuf permesan"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Risotto au bœuf permesan</h3>
+                            <div class="dish-price">2100 DA</div>
+                        </div>
+                        <p class="dish-desc">Risotto au bœuf et parmesan</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="risotto-crevettes">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Risotto%20Crevettes.glb"
+                            alt="Risotto aux crevettes permesan"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Risotto aux crevettes permesan</h3>
+                            <div class="dish-price">2300 DA</div>
+                        </div>
+                        <p class="dish-desc">Risotto aux crevettes et parmesan</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 5: Pastas & Pizza -->
+            <div class="menu-section" data-category="pastas">
+                <div class="section-header">
+                    <h2 class="section-title">Pastas</h2>
+                </div>
+                
+                <div class="dish" data-dish="pasta-parmesan">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Parmesan.glb"
+                            alt="Avec Parmesan"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Avec Parmesan</h3>
+                            <div class="dish-price">1400 DA</div>
+                        </div>
+                        <p class="dish-desc">Pâtes fraîches au parmesan râpé</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="lasagne">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Lasagne.glb"
+                            alt="Lasagne"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Lasagne</h3>
+                            <div class="dish-price">1600 DA</div>
+                        </div>
+                        <p class="dish-desc">Lasagne maison à la bolognaise</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pasta-pesto">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Pesto.glb"
+                            alt="Pesto"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Pesto</h3>
+                            <div class="dish-price">1500 DA</div>
+                        </div>
+                        <p class="dish-desc">Pâtes au pesto de basilic frais</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pasta-bolognaise">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Bolognaise.glb"
+                            alt="Bolognaise"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bolognaise</h3>
+                            <div class="dish-price">1550 DA</div>
+                        </div>
+                        <p class="dish-desc">Spaghetti à la sauce bolognaise</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pasta-carbonara">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Carbonara.glb"
+                            alt="Carbonara aux Œufs"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Carbonara aux Œufs</h3>
+                            <div class="dish-price">1650 DA</div>
+                        </div>
+                        <p class="dish-desc">Carbonara traditionnelle aux œufs</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pasta-alfredo">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Alfredo.glb"
+                            alt="Alfredo (Poulet, Champignon)"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Alfredo (Poulet, Champignon)</h3>
+                            <div class="dish-price">1750 DA</div>
+                        </div>
+                        <p class="dish-desc">Pâtes sauce alfredo au poulet et champignons</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pasta-crevettes">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Crevettes.glb"
+                            alt="Crevettes"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Crevettes</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Pâtes aux crevettes fraîches</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pasta-saumon">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pasta%20Saumon.glb"
+                            alt="Saumon"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Saumon</h3>
+                            <div class="dish-price">2100 DA</div>
+                        </div>
+                        <p class="dish-desc">Pâtes au saumon fumé et crème</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section" data-category="pizza">
+                <div class="section-header">
+                    <h2 class="section-title">Pizza</h2>
+                </div>
+                
+                <div class="dish" data-dish="pizza-margueritte">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Margueritte.glb"
+                            alt="MARGUERITTE"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">MARGUERITTE</h3>
+                            <div class="dish-price">1200 DA</div>
+                        </div>
+                        <p class="dish-desc">Tomate, mozzarella, basilic</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-casa">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Casa.glb"
+                            alt="CASA"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">CASA</h3>
+                            <div class="dish-price">1300 DA</div>
+                        </div>
+                        <p class="dish-desc">Jambon, champignons, olives</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-vegetarienne">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Vegetarienne.glb"
+                            alt="VÉGÉTARIENNE"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">VÉGÉTARIENNE</h3>
+                            <div class="dish-price">1350 DA</div>
+                        </div>
+                        <p class="dish-desc">Légumes grillés, mozzarella</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-regina">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Regina.glb"
+                            alt="RÉGINA"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">RÉGINA</h3>
+                            <div class="dish-price">1400 DA</div>
+                        </div>
+                        <p class="dish-desc">Jambon, champignons, fromage</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-mexicaine">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Mexicaine.glb"
+                            alt="MEXICAINE"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">MEXICAINE</h3>
+                            <div class="dish-price">1450 DA</div>
+                        </div>
+                        <p class="dish-desc">Viande hachée, poivrons, épices</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-pepperoni">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Pepperoni.glb"
+                            alt="PEPPERONI"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">PEPPERONI</h3>
+                            <div class="dish-price">1500 DA</div>
+                        </div>
+                        <p class="dish-desc">Pepperoni, mozzarella, sauce tomate</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-parisienne">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Parisienne.glb"
+                            alt="PARISIENNE"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">PARISIENNE</h3>
+                            <div class="dish-price">1550 DA</div>
+                        </div>
+                        <p class="dish-desc">Chèvre, miel, noix</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-5-fromages">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%205%20Fromages.glb"
+                            alt="05 FROMAGES"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">05 FROMAGES</h3>
+                            <div class="dish-price">1600 DA</div>
+                        </div>
+                        <p class="dish-desc">Cinq fromages sélectionnés</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-4-saison">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%204%20Saison.glb"
+                            alt="04 SAISON"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">04 SAISON</h3>
+                            <div class="dish-price">1550 DA</div>
+                        </div>
+                        <p class="dish-desc">Légumes de saison, fromage</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-buratta">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Buratta.glb"
+                            alt="BURATTA"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">BURATTA</h3>
+                            <div class="dish-price">1700 DA</div>
+                        </div>
+                        <p class="dish-desc">Burrata, tomates cerises, roquette</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-cicilienne">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Cicilienne.glb"
+                            alt="CICILIENNE"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">CICILIENNE</h3>
+                            <div class="dish-price">1650 DA</div>
+                        </div>
+                        <p class="dish-desc">Anchois, câpres, olives</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-beef">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Beef.glb"
+                            alt="BEEF"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">BEEF</h3>
+                            <div class="dish-price">1800 DA</div>
+                        </div>
+                        <p class="dish-desc">Viande de bœuf, oignons, fromage</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-saumon">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Saumon%20Fish.glb"
+                            alt="SAUMON"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">SAUMON</h3>
+                            <div class="dish-price">1900 DA</div>
+                        </div>
+                        <p class="dish-desc">Saumon fumé, crème fraîche, aneth</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pizza-fruits-mer">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pizza%20Fruits%20Mer.glb"
+                            alt="FRUIT DE MER"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">FRUIT DE MER</h3>
+                            <div class="dish-price">2000 DA</div>
+                        </div>
+                        <p class="dish-desc">Fruits de mer frais, sauce blanche</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 6: Snacks & Crêpes/Gaufres -->
+            <div class="menu-section" data-category="snacks">
+                <div class="section-header">
+                    <h2 class="section-title">Snacks</h2>
+                </div>
+                
+                <div class="dish" data-dish="burger-classique">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burger%20Classique.glb"
+                            alt="CLASSIQUE BURGER"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">CLASSIQUE BURGER</h3>
+                            <div class="dish-price">1400 DA</div>
+                        </div>
+                        <p class="dish-desc">Steak haché, fromage, salade, tomate</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="burger-fortune">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burger%20Fortune.glb"
+                            alt="FORTUNE BURGER"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">FORTUNE BURGER</h3>
+                            <div class="dish-price">1600 DA</div>
+                        </div>
+                        <p class="dish-desc">Double steak, bacon, fromage fondant</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="burger-american">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Burger%20American.glb"
+                            alt="AMERICAN BURGER"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">AMERICAN BURGER</h3>
+                            <div class="dish-price">1550 DA</div>
+                        </div>
+                        <p class="dish-desc">Steak, cheddar, oignons, sauce barbecue</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-section" data-category="crepes">
+                <div class="section-header">
+                    <h2 class="section-title">Crêpes/Gaufres & Pancakes/Croissants</h2>
+                </div>
+                
+                <div class="dish" data-dish="crepe-nutella">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crepe%20Nutella.glb"
+                            alt="Nutella"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Nutella</h3>
+                            <div class="dish-price">800 DA</div>
+                        </div>
+                        <p class="dish-desc">Crêpe au Nutella</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="crepe-nutella-fruit">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crepe%20Nutella%20Fruit.glb"
+                            alt="Nutella fruit"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Nutella fruit</h3>
+                            <div class="dish-price">950 DA</div>
+                        </div>
+                        <p class="dish-desc">Nutella avec fruits frais</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="crepe-nutella-glace">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crepe%20Nutella%20Glace.glb"
+                            alt="Nutella glace"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Nutella glace</h3>
+                            <div class="dish-price">1000 DA</div>
+                        </div>
+                        <p class="dish-desc">Nutella avec boule de glace</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="crepe-nutella-brownie">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crepe%20Nutella%20Brownie.glb"
+                            alt="Nutella Brownie"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Nutella Brownie</h3>
+                            <div class="dish-price">1100 DA</div>
+                        </div>
+                        <p class="dish-desc">Nutella avec morceaux de brownie</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="crepe-nutella-pistachio">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Crepe%20Nutella%20Pistachio.glb"
+                            alt="Nutella pistachio Dubai"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Nutella pistachio Dubai</h3>
+                            <div class="dish-price">1200 DA</div>
+                        </div>
+                        <p class="dish-desc">Nutella avec pistaches et miel</p>
+                    </div>
+                </div>
+                
+                <!-- Gaufres Section -->
+                <div class="dish" data-dish="gaufre-nutella">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Gaufre%20Nutella.glb"
+                            alt="Gaufre Nutella"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Gaufre Nutella</h3>
+                            <div class="dish-price">850 DA</div>
+                        </div>
+                        <p class="dish-desc">Gaufre belge au Nutella</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="gaufre-nutella-fruit">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Gaufre%20Nutella%20Fruit.glb"
+                            alt="Gaufre Nutella fruit"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Gaufre Nutella fruit</h3>
+                            <div class="dish-price">1000 DA</div>
+                        </div>
+                        <p class="dish-desc">Gaufre avec Nutella et fruits</p>
+                    </div>
+                </div>
+                
+                <!-- Pancakes Section -->
+                <div class="dish" data-dish="pancake-nutella">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pancake%20Nutella.glb"
+                            alt="Pancake Nutella"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Pancake Nutella</h3>
+                            <div class="dish-price">900 DA</div>
+                        </div>
+                        <p class="dish-desc">Pancakes américains au Nutella</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="pancake-nutella-fruit">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pancake%20Nutella%20Fruit.glb"
+                            alt="Pancake Nutella fruit"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Pancake Nutella fruit</h3>
+                            <div class="dish-price">1050 DA</div>
+                        </div>
+                        <p class="dish-desc">Pancakes avec Nutella et fruits frais</p>
+                    </div>
+                </div>
+                
+                <!-- Croissants Section -->
+                <div class="dish" data-dish="croissant-nutella">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Croissant%20Nutella.glb"
+                            alt="Croissant Nutella"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Croissant Nutella</h3>
+                            <div class="dish-price">700 DA</div>
+                        </div>
+                        <p class="dish-desc">Croissant au beurre fourré au Nutella</p>
+                    </div>
+                </div>
+                
+                <div class="dish" data-dish="croissant-nutella-amande">
+                    <div class="dish-model">
+                        <model-viewer
+                            src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Croissant%20Nutella%20Amande.glb"
+                            alt="Croissant Nutella amande"
+                            camera-controls
+                            auto-rotate
+                            ar
+                            environment-image="neutral">
+                        </model-viewer>
+                        <div class="enlarge-icon" title="Agrandir">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Croissant Nutella amande</h3>
+                            <div class="dish-price">850 DA</div>
+                        </div>
+                        <p class="dish-desc">Croissant au Nutella et amandes effilées</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Continue with more rows for Pastas, Pizza, Snacks, Crêpes -->
+            <!-- Due to space constraints, I'll show the pattern for the remaining sections -->
+            <!-- You would continue in the same pattern for Pastas, Pizza, Snacks, and Crêpes sections -->
+
         </div>
     </section>
 
-    <!-- Wine Pairing Section -->
-    <section class="wine-pairing">
-        <div class="container">
-            <h2 class="section-title">Accords Mets & Vins</h2>
-            <div class="divider"></div>
-            <div class="pairing-grid">
-                <div class="pairing-item">
-                    <h3>Viandes Rouges</h3>
-                    <p>Malbec Argentin - Catena Zapata</p>
-                    <p class="pairing-price">€45 / bouteille</p>
-                </div>
-                <div class="pairing-item">
-                    <h3>Poissons & Fruits de Mer</h3>
-                    <p>Sauvignon Blanc Chilien - Casa Lapostolle</p>
-                    <p class="pairing-price">€38 / bouteille</p>
-                </div>
-            </div>
+    <!-- 3D Model Modal -->
+    <div class="model-modal" id="modelModal">
+        <div class="model-modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <model-viewer
+                id="modalModelViewer"
+                src=""
+                alt=""
+                camera-controls
+                auto-rotate
+                ar
+                environment-image="neutral">
+            </model-viewer>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Latina House" class="logo">
-                    <p>L'élégance culinaire d'Amérique Latine</p>
-                </div>
-                <div class="footer-info">
-                    <h3>Horaires</h3>
-                    <p>Mardi - Dimanche: 19h - 23h</p>
-                    <p>Samedi - Dimanche déjeuner: 12h - 15h</p>
-                    <p>Lundi: Fermé</p>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact</h3>
-                    <p>123 Avenue de la Gastronomie</p>
-                    <p>75008 Paris, France</p>
-                    <p>01.23.45.67.89</p>
-                </div>
-            </div>
             <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                <a href="https://www.instagram.com/latinahouse" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
-            <p class="copyright">© 2024 Latina House. Tous droits réservés.</p>
+            <p class="copyright">© 2025 Latina House. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Filter menu items by category
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const menuSections = document.querySelectorAll('.menu-section');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    menuSections.forEach(section => {
+                        if (category === 'all' || section.getAttribute('data-category') === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal functionality for 3D models
+            const modal = document.getElementById('modelModal');
+            const closeModalBtn = document.getElementById('closeModal');
+            const modalModelViewer = document.getElementById('modalModelViewer');
+            
+            document.querySelectorAll('.enlarge-icon').forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    const dishModel = this.closest('.dish-model');
+                    const modelViewer = dishModel.querySelector('model-viewer');
+                    
+                    modalModelViewer.src = modelViewer.src;
+                    modalModelViewer.alt = modelViewer.alt;
+                    
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            closeModalBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Prevent scrolling when interacting with 3D models on mobile
+            document.querySelectorAll('model-viewer').forEach(viewer => {
+                viewer.addEventListener('touchstart', function(e) {
+                    if (e.touches.length === 1) {
+                        // Allow the first touch to start model interaction
+                    }
+                }, { passive: true });
+            });
+        });
+    </script>
 </body>
 </html>

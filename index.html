@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latina House</title>
+    <title>Contact - Latina House</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,86 +16,284 @@
         <div class="container">
             <div class="logo-container">
                 <a href="index-latina.html">
-                    <!-- Replace with your Latina House logo -->
-                    <img src="logo.JPG" alt="Latina House" class="logo">
+                    <img src="logo-latina.png" alt="Latina House" class="logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index-latina.html" class="active">Accueil</a></li>
-                    <li><a href="menu-latina.html">Menu</a></li>
-                    <li><a href="contact-latina.html">Contact & Réservations</a></li>
+                    <li><a href="index-latina.html">Accueil</a></li>
+                    <li><a href="menu-latina-full.html">Menu</a></li>
+                    <li><a href="contact-latina.html" class="active">Contact & Réservations</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Contact Header -->
+    <section class="contact-header">
         <div class="container">
-            <h1 class="text-gold">Bienvenue à <span style="font-style: italic;">Latina House</span></h1>
-            <p>Un lieu d'exception où la cuisine latine rencontre l'élégance. Découvrez une expérience gastronomique unique.</p>
+            <h1 class="text-gold">Contact & Réservations</h1>
+            <p>Notre équipe est à votre disposition pour toute demande d'information ou réservation</p>
             <div class="divider"></div>
-            <div class="hero-btns">
-                <a href="menu-latina.html" class="btn">Découvrir notre menu</a>
-                <a href="contact-latina.html" class="btn btn-gold">Réserver une table</a>
-            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container" style="display: flex; align-items: center; gap: 80px;">
-            <div class="about-img" style="background-image: url('latina-restaurant.jpg');"></div>
-            <div class="about-content">
-                <h2 class="text-gold">Notre Histoire</h2>
-                <p>Latina House, situé au cœur de la ville, incarne l'excellence de la cuisine latine avec une touche contemporaine.</p>
-                <p>Notre établissement accueille des convives séduits par notre approche unique de la gastronomie latine.</p>
-                <p>Chaque plat est une célébration des saveurs latines, chaque ingrédient soigneusement sélectionné.</p>
+    <!-- Contact & Reservation Form -->
+    <section class="contact-container">
+        <div class="container">
+            <div class="contact-info">
+                <h2 class="text-gold">Informations</h2>
                 
-                <!-- NEW SECTION: Votre maison latine -->
-                <div style="margin-top: 50px; padding-top: 50px; border-top: 2px solid rgba(139, 115, 85, 0.2);">
-                    <div style="margin-bottom: 30px;">
-                        <h3 class="text-gold" style="font-size: 2.2rem; margin-bottom: 15px; position: relative; padding-bottom: 15px; display: inline-block;">
-                            Votre maison latine
-                            <span style="position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: #8b7355;"></span>
-                        </h3>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Adresse</h3>
+                        <p>Rue Principale, Centre-ville</p>
+                        <p>Notre établissement est situé au cœur de la ville</p>
+                    </div>
+                </div>
+                
+                <!-- Google Maps Embed -->
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Localisation</h3>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608207!2d2.292292615675377!3d48.85837360866195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1645223745555!5m2!1sfr!2sfr" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Téléphones</h3>
+                        <p style="font-size: 1.3rem;">07.70.61.64.52</p>
+                        <p style="font-size: 1.3rem;">06.60.96.16.22</p>
+                        <p style="font-size: 0.9rem; color: #8a7c68; margin-top: 5px;">Du lundi au dimanche, 10h-23h</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>contact@latinahouse.com</p>
+                        <p>reservations@latinahouse.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Horaires</h3>
+                        <p><strong>Déjeuner:</strong> 12h - 15h (tous les jours)</p>
+                        <p><strong>Dîner:</strong> 19h - 23h (tous les jours)</p>
+                        <p><strong>Brunch:</strong> Samedi & Dimanche: 10h - 14h</p>
+                        <p><em>Ouvert 7 jours sur 7</em></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Informations importantes</h3>
+                        <p>Réservation recommandée, surtout les week-ends et jours fériés.</p>
+                        <p>Pour les annulations, merci de nous prévenir au moins 24 heures à l'avance.</p>
+                        <p>Événements privés disponibles sur demande.</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Services spéciaux</h3>
+                        <p>• Anniversaires & Célébrations</p>
+                        <p>• Événements d'entreprise</p>
+                        <p>• Mariages & Réceptions</p>
+                        <p>• Menu dégustation disponible</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reservation-form">
+                <h2 class="text-gold">Formulaire de Réservation</h2>
+                <p style="margin-bottom: 30px;">Pour toute réservation, merci de compléter le formulaire ci-dessous.</p>
+                
+                <form id="reservationForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom et prénom">
                     </div>
                     
-                    <div style="text-align: center; margin: 30px 0;">
-                        <img src="latina-interior.jpg" alt="Latina House" style="width: 100%; max-width: 500px; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(74, 60, 42, 0.1);">
+                    <div class="form-group">
+                        <label for="email">Adresse email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="exemple@email.com (Optionnel)">
                     </div>
-                </div>
-                
-                <a href="contact-latina.html" class="btn" style="margin-top: 30px;">En savoir plus</a>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required placeholder="Ex: 0770616452 ou 07.70.61.64.52">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date souhaitée *</label>
+                        <input type="date" id="date" name="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Heure souhaitée *</label>
+                        <select id="time" name="time" class="form-control" required>
+                            <option value="">Sélectionnez une heure</option>
+                            <optgroup label="Déjeuner">
+                                <option value="12:00">12:00</option>
+                                <option value="12:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                            </optgroup>
+                            <optgroup label="Dîner">
+                                <option value="19:00">19:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Nombre de personnes *</label>
+                        <select id="guests" name="guests" class="form-control" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes</option>
+                            <option value="6">6 personnes</option>
+                            <option value="7">7 personnes</option>
+                            <option value="8">8 personnes</option>
+                            <option value="9">9 personnes ou plus</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="occasion">Occasion spéciale</label>
+                        <select id="occasion" name="occasion" class="form-control">
+                            <option value="">Sélectionnez une occasion (Optionnel)</option>
+                            <option value="anniversaire">Anniversaire</option>
+                            <option value="mariage">Mariage / Fiançailles</option>
+                            <option value="entreprise">Événement d'entreprise</option>
+                            <option value="familial">Réunion familiale</option>
+                            <option value="romantique">Dîner romantique</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Demandes particulières</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Allergies, menu spécifique, décoration spéciale, musique..."></textarea>
+                    </div>
+                    
+                    <div class="whatsapp-notification" id="whatsappNotification">
+                        <i class="fab fa-whatsapp"></i>
+                        <span id="notificationText"></span>
+                    </div>
+                    
+                    <div class="reservation-option">
+                        <p><strong>Réserver via WhatsApp</strong></p>
+                        <button type="button" class="whatsapp-btn" id="whatsappReserveBtn">
+                            <i class="fab fa-whatsapp"></i> Envoyer la réservation sur WhatsApp
+                        </button>
+                        <p style="font-size: 0.9rem; color: #8a7c68; margin-top: 10px;">
+                            Votre réservation sera envoyée directement à notre équipe
+                        </p>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 15px; background-color: rgba(139, 115, 85, 0.1); border-radius: 5px;">
+                        <p style="font-size: 0.9rem; color: #5d4c34; text-align: center;">
+                            <i class="fas fa-info-circle text-gold"></i> 
+                            Vous pouvez également réserver par téléphone aux numéros indiqués ci-dessus.
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
+    <!-- Instagram Section -->
+    <section class="instagram-section">
         <div class="container">
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-utensils"></i>
+            <h2 class="text-gold">Suivez-nous sur Instagram</h2>
+            <p>Découvrez nos dernières créations latines et les coulisses de Latina House</p>
+            
+            <a href="https://www.instagram.com/latinahouse" target="_blank" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            
+            <br>
+            <a href="https://www.instagram.com/latinahouse" target="_blank" class="instagram-link">
+                @latinahouse
+            </a>
+            <p style="margin-top: 15px; color: #8a7c68;">Partagez vos moments chez nous avec le hashtag <strong>#LatinaHouse</strong></p>
+            
+            <!-- Instagram Preview Grid -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div style="height: 150px; background-color: #ede8dd; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #8b7355;">
+                    <i class="fab fa-instagram fa-2x"></i>
                 </div>
-                <h3>Cuisine Latine</h3>
-                <p>Notre chef réinvente la gastronomie latine avec créativité et respect des traditions.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-wine-glass-alt"></i>
+                <div style="height: 150px; background-color: #ede8dd; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #8b7355;">
+                    <i class="fas fa-utensils fa-2x"></i>
                 </div>
-                <h3>Bar Latin</h3>
-                <p>Sélection soigneuse de cocktails et vins pour accompagner parfaitement chaque plat.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="fas fa-gem"></i>
+                <div style="height: 150px; background-color: #ede8dd; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #8b7355;">
+                    <i class="fas fa-wine-glass-alt fa-2x"></i>
                 </div>
-                <h3>Ambiance Latino</h3>
-                <p>Décor raffiné mêlant design contemporain et éléments latins pour une expérience sensorielle complète.</p>
+                <div style="height: 150px; background-color: #ede8dd; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #8b7355;">
+                    <i class="fas fa-music fa-2x"></i>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section style="padding: 60px 0; text-align: center; background-color: #f5f1e8; border-top: 2px solid rgba(139, 115, 85, 0.2);">
+        <div class="container">
+            <h2 class="text-gold">Restez informés</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">Inscrivez-vous à notre newsletter pour recevoir nos nouveautés et offres spéciales</p>
+            
+            <form style="max-width: 500px; margin: 0 auto;">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                    <input type="email" placeholder="Votre adresse email" style="flex: 1; min-width: 250px; padding: 12px 15px; border: 2px solid rgba(139, 115, 85, 0.2); border-radius: 5px; background-color: white; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">
+                    <button type="submit" class="btn btn-gold" style="padding: 12px 30px;">S'inscrire</button>
+                </div>
+                <p style="font-size: 0.8rem; color: #8a7c68; margin-top: 10px;">Nous ne partagerons jamais votre email. Désinscription à tout moment.</p>
+            </form>
         </div>
     </section>
 
@@ -103,12 +301,174 @@
     <footer>
         <div class="container">
             <div class="social-icons">
-                <a href="https://www.instagram.com/latinahouse" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <a href="https://www.instagram.com/latinahouse" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/latinahouse" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/213770616452" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@latinahouse" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
             </div>
-            <p class="copyright">© 2025 Latina House. Tous droits réservés.</p>
+            
+            <div style="margin: 20px 0; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <a href="index-latina.html" style="color: #4a3c2a; text-decoration: none; font-family: 'Playfair Display', serif;">Accueil</a>
+                <a href="menu-latina-full.html" style="color: #4a3c2a; text-decoration: none; font-family: 'Playfair Display', serif;">Menu</a>
+                <a href="contact-latina.html" style="color: #4a3c2a; text-decoration: none; font-family: 'Playfair Display', serif;">Contact</a>
+                <a href="#" style="color: #4a3c2a; text-decoration: none; font-family: 'Playfair Display', serif;">Événements</a>
+                <a href="#" style="color: #4a3c2a; text-decoration: none; font-family: 'Playfair Display', serif;">À propos</a>
+                <a href="#" style="color: #4a3c2a; text-decoration: none; font-family: 'Playfair Display', serif;">Carrière</a>
+            </div>
+            
+            <p class="copyright">© 2025 Latina House. Tous droits réservés. | <span style="font-size: 1.1rem;">07.70.61.64.52 / 06.60.96.16.22</span></p>
+            <p style="font-size: 0.8rem; color: #8a7c68; margin-top: 10px;">Conçu avec passion pour la cuisine latine</p>
         </div>
     </footer>
+
+    <script>
+        // Set minimum date to today for reservation form
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('date');
+            dateInput.setAttribute('min', today);
+            
+            // Set maximum date to 3 months from now
+            const maxDate = new Date();
+            maxDate.setMonth(maxDate.getMonth() + 3);
+            const maxDateFormatted = maxDate.toISOString().split('T')[0];
+            dateInput.setAttribute('max', maxDateFormatted);
+            
+            // Set default time to next available slot
+            const now = new Date();
+            const currentHour = now.getHours();
+            const timeSelect = document.getElementById('time');
+            
+            // If it's past 22:00, set default to tomorrow's lunch
+            if (currentHour >= 22) {
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                dateInput.value = tomorrow.toISOString().split('T')[0];
+            }
+            
+            // WhatsApp reservation button
+            const whatsappBtn = document.getElementById('whatsappReserveBtn');
+            const notification = document.getElementById('whatsappNotification');
+            const notificationText = document.getElementById('notificationText');
+            
+            whatsappBtn.addEventListener('click', function() {
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const date = document.getElementById('date').value;
+                const time = document.getElementById('time').value;
+                const guests = document.getElementById('guests').value;
+                const occasion = document.getElementById('occasion').value;
+                const message = document.getElementById('message').value;
+                
+                // Validation
+                if (!name || !phone || !date || !time || !guests) {
+                    notificationText.textContent = 'Veuillez remplir tous les champs obligatoires (*)';
+                    notification.style.backgroundColor = 'rgba(255, 0, 0, 0.1)';
+                    notification.style.borderColor = 'rgba(255, 0, 0, 0.3)';
+                    notification.style.display = 'block';
+                    return;
+                }
+                
+                // Format date
+                const formattedDate = new Date(date).toLocaleDateString('fr-FR', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                // Create WhatsApp message
+                let whatsappMessage = `Bonjour, je souhaite réserver une table à Latina House:
+                
+📅 Date: ${formattedDate}
+⏰ Heure: ${time}
+👥 Nombre de personnes: ${guests}
+👤 Nom: ${name}
+📞 Téléphone: ${phone}
+📧 Email: ${email || 'Non fourni'}`;
+                
+                if (occasion) {
+                    whatsappMessage += `\n🎉 Occasion: ${occasion}`;
+                }
+                
+                if (message) {
+                    whatsappMessage += `\n💬 Message: ${message}`;
+                }
+                
+                whatsappMessage += `\n\nMerci de me confirmer cette réservation.`;
+                
+                // Encode message for URL
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                
+                // WhatsApp phone number
+                const whatsappNumber = '213770616452';
+                
+                // Create WhatsApp URL
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                
+                // Show notification
+                notificationText.textContent = 'Redirection vers WhatsApp...';
+                notification.style.backgroundColor = 'rgba(37, 211, 102, 0.1)';
+                notification.style.borderColor = 'rgba(37, 211, 102, 0.3)';
+                notification.style.display = 'block';
+                
+                // Open WhatsApp after a short delay
+                setTimeout(() => {
+                    window.open(whatsappUrl, '_blank');
+                    
+                    // Update notification
+                    notificationText.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp ouvert! Veuillez envoyer le message pour finaliser votre réservation.';
+                    
+                    // Reset form after successful submission
+                    setTimeout(() => {
+                        document.getElementById('reservationForm').reset();
+                        dateInput.setAttribute('min', today);
+                        notification.style.display = 'none';
+                        
+                        // Show success message
+                        alert('Merci pour votre réservation! Notre équipe vous contactera pour confirmation.');
+                    }, 3000);
+                }, 1000);
+            });
+            
+            // Auto-format phone number
+            document.getElementById('phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                // Format as Algerian number: 07.70.61.64.52
+                if (value.length > 2) {
+                    value = value.substring(0, 2) + '.' + value.substring(2);
+                }
+                if (value.length > 5) {
+                    value = value.substring(0, 5) + '.' + value.substring(5);
+                }
+                if (value.length > 8) {
+                    value = value.substring(0, 8) + '.' + value.substring(8);
+                }
+                if (value.length > 11) {
+                    value = value.substring(0, 11) + '.' + value.substring(11);
+                }
+                
+                e.target.value = value;
+            });
+            
+            // Add today's date as placeholder
+            dateInput.value = today;
+            
+            // Auto-select appropriate time based on current time
+            if (currentHour >= 12 && currentHour < 15) {
+                // Lunch time
+                timeSelect.value = '13:00';
+            } else if (currentHour >= 19 && currentHour < 22) {
+                // Dinner time
+                timeSelect.value = '20:00';
+            } else {
+                // Default to lunch if before 12, dinner if after 15
+                timeSelect.value = currentHour < 12 ? '13:00' : '20:00';
+            }
+        });
+    </script>
 </body>
 </html>

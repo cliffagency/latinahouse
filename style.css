@@ -12,8 +12,8 @@ html {
 }
 
 body {
-    background-color: #f5f1e8; /* Elegant beige */
-    color: #4a3c2a; /* Elegant brown */
+    background-color: #f8f5f0; /* Elegant light beige */
+    color: #5d4c34; /* Warm brown for text */
     font-family: 'Cormorant Garamond', serif;
     line-height: 1.6;
     overflow-x: hidden;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
     letter-spacing: 0.5px;
-    color: #3a2e1f; /* Darker brown */
+    color: #3a2e1f; /* Darker brown for headings */
 }
 
 h1 {
@@ -52,7 +52,7 @@ h2:after {
     height: 2px;
     bottom: -10px;
     left: 20%;
-    background-color: #8b7355; /* Elegant gold-brown */
+    background-color: #b89b6e; /* Gold-brown accent */
 }
 
 h3 {
@@ -62,7 +62,7 @@ h3 {
 
 p {
     font-size: 1.2rem;
-    color: #5d4c34;
+    color: #6d5c44;
     font-weight: 400;
 }
 
@@ -70,8 +70,8 @@ p {
 .btn {
     display: inline-block;
     background: transparent;
-    color: #8b7355;
-    border: 2px solid #8b7355;
+    color: #b89b6e;
+    border: 2px solid #b89b6e;
     padding: 12px 32px;
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
@@ -84,25 +84,25 @@ p {
 }
 
 .btn:hover {
-    background-color: rgba(139, 115, 85, 0.1);
+    background-color: rgba(184, 155, 110, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(74, 60, 42, 0.1);
+    box-shadow: 0 5px 15px rgba(58, 46, 31, 0.1);
 }
 
 .btn-gold {
-    background-color: #8b7355;
-    color: #f5f1e8;
+    background-color: #b89b6e;
+    color: #f8f5f0;
 }
 
 .btn-gold:hover {
-    background-color: #a08665;
-    border-color: #a08665;
+    background-color: #c9ac7f;
+    border-color: #c9ac7f;
 }
 
 .category-btn {
     background: transparent;
-    color: #4a3c2a;
-    border: 2px solid rgba(74, 60, 42, 0.2);
+    color: #5d4c34;
+    border: 2px solid rgba(93, 76, 52, 0.3);
     padding: 10px 25px;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
@@ -112,9 +112,9 @@ p {
 }
 
 .category-btn:hover, .category-btn.active {
-    background-color: rgba(139, 115, 85, 0.1);
-    border-color: #8b7355;
-    color: #8b7355;
+    background-color: rgba(184, 155, 110, 0.15);
+    border-color: #b89b6e;
+    color: #b89b6e;
 }
 
 /* WhatsApp Button */
@@ -149,6 +149,7 @@ p {
     margin: 15px 0;
     text-align: center;
     display: none;
+    color: #5d4c34;
 }
 
 .whatsapp-notification i {
@@ -165,11 +166,11 @@ p {
 header {
     padding: 30px 0;
     text-align: center;
-    border-bottom: 1px solid rgba(74, 60, 42, 0.1);
+    border-bottom: 1px solid rgba(184, 155, 110, 0.2);
     margin-bottom: 60px;
     position: sticky;
     top: 0;
-    background-color: rgba(245, 241, 232, 0.95);
+    background-color: rgba(248, 245, 240, 0.95);
     z-index: 100;
     backdrop-filter: blur(10px);
 }
@@ -181,7 +182,6 @@ header {
 .logo {
     width: 280px;
     height: auto;
-    filter: brightness(0.9);
     transition: transform 0.5s ease;
 }
 
@@ -198,7 +198,7 @@ nav ul {
 }
 
 nav a {
-    color: #4a3c2a;
+    color: #5d4c34;
     text-decoration: none;
     font-family: 'Playfair Display', serif;
     font-size: 18px;
@@ -216,12 +216,12 @@ nav a:after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #8b7355;
+    background-color: #b89b6e;
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #8b7355;
+    color: #b89b6e;
 }
 
 nav a:hover:after {
@@ -229,7 +229,7 @@ nav a:hover:after {
 }
 
 nav a.active {
-    color: #8b7355;
+    color: #b89b6e;
 }
 
 nav a.active:after {
@@ -240,9 +240,9 @@ nav a.active:after {
 footer {
     text-align: center;
     padding: 40px 0;
-    border-top: 1px solid rgba(74, 60, 42, 0.1);
+    border-top: 1px solid rgba(184, 155, 110, 0.2);
     margin-top: 80px;
-    background-color: #ede8dd;
+    background-color: #f0ebe2;
 }
 
 .social-icons {
@@ -253,13 +253,13 @@ footer {
 }
 
 .social-icon {
-    color: #4a3c2a;
+    color: #5d4c34;
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #8b7355;
+    color: #b89b6e;
     transform: translateY(-3px);
 }
 
@@ -301,8 +301,8 @@ footer {
     align-items: center;
     gap: 80px;
     padding: 100px 0;
-    border-top: 1px solid rgba(74, 60, 42, 0.1);
-    border-bottom: 1px solid rgba(74, 60, 42, 0.1);
+    border-top: 1px solid rgba(184, 155, 110, 0.2);
+    border-bottom: 1px solid rgba(184, 155, 110, 0.2);
 }
 
 .about-img {
@@ -310,8 +310,8 @@ footer {
     height: 500px;
     background-size: cover;
     background-position: center;
-    border-radius: 2px;
-    box-shadow: 0 10px 30px rgba(74, 60, 42, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(58, 46, 31, 0.1);
 }
 
 .about-content {
@@ -329,14 +329,15 @@ footer {
 .feature {
     text-align: center;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(74, 60, 42, 0.05);
+    box-shadow: 0 5px 15px rgba(58, 46, 31, 0.05);
+    border: 1px solid rgba(184, 155, 110, 0.1);
 }
 
 .feature-icon {
     font-size: 2.5rem;
-    color: #8b7355;
+    color: #b89b6e;
     margin-bottom: 20px;
 }
 
@@ -356,7 +357,7 @@ footer {
     padding-bottom: 10px;
 }
 
-/* NEW: HORIZONTAL MENU SECTIONS */
+/* HORIZONTAL MENU SECTIONS */
 .menu-sections-horizontal {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
@@ -366,17 +367,17 @@ footer {
 
 .menu-section {
     padding: 30px;
-    border: 2px solid rgba(139, 115, 85, 0.2);
+    border: 2px solid rgba(184, 155, 110, 0.3);
     border-radius: 10px;
     transition: transform 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 5px 15px rgba(74, 60, 42, 0.05);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(58, 46, 31, 0.08);
 }
 
 .menu-section:hover {
     transform: translateY(-5px);
-    border-color: rgba(139, 115, 85, 0.4);
-    box-shadow: 0 10px 25px rgba(74, 60, 42, 0.1);
+    border-color: rgba(184, 155, 110, 0.5);
+    box-shadow: 0 10px 25px rgba(58, 46, 31, 0.12);
 }
 
 .section-header {
@@ -385,12 +386,12 @@ footer {
     justify-content: space-between;
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgba(139, 115, 85, 0.2);
+    border-bottom: 2px solid rgba(184, 155, 110, 0.3);
 }
 
 .section-title {
     font-size: 2.2rem;
-    color: #8b7355;
+    color: #b89b6e;
 }
 
 /* DISHES */
@@ -412,7 +413,7 @@ footer {
     height: 180px;
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid rgba(139, 115, 85, 0.2);
+    border: 2px solid rgba(184, 155, 110, 0.3);
     position: relative;
     touch-action: none;
     background-color: #fff;
@@ -421,7 +422,7 @@ footer {
 model-viewer {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #f8f5f0;
     touch-action: pan-y;
 }
 
@@ -429,8 +430,8 @@ model-viewer {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: rgba(139, 115, 85, 0.9);
-    color: #f5f1e8;
+    background-color: rgba(184, 155, 110, 0.9);
+    color: #f8f5f0;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -466,14 +467,15 @@ model-viewer {
 }
 
 .dish-price {
-    color: #8b7355;
+    color: #b89b6e;
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 .dish-desc {
     margin-bottom: 15px;
-    color: #5d4c34;
+    color: #6d5c44;
+    font-size: 1.1rem;
 }
 
 .dish-ingredients {
@@ -486,10 +488,10 @@ model-viewer {
 .tasting-menu {
     text-align: center;
     padding: 80px 0;
-    background-color: rgba(237, 232, 221, 0.7);
+    background-color: rgba(240, 235, 226, 0.7);
     margin: 60px 0;
-    border-top: 2px solid rgba(74, 60, 42, 0.1);
-    border-bottom: 2px solid rgba(74, 60, 42, 0.1);
+    border-top: 2px solid rgba(184, 155, 110, 0.2);
+    border-bottom: 2px solid rgba(184, 155, 110, 0.2);
 }
 
 /* ====== CONTACT PAGE STYLES ====== */
@@ -514,35 +516,45 @@ model-viewer {
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(184, 155, 110, 0.2);
 }
 
 .info-icon {
     font-size: 1.5rem;
-    color: #8b7355;
+    color: #b89b6e;
     margin-top: 5px;
 }
 
 .info-content h3 {
     margin-bottom: 5px;
+    color: #3a2e1f;
+}
+
+.info-content p {
+    color: #6d5c44;
 }
 
 .map-container {
     margin-top: 10px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(74, 60, 42, 0.1);
+    box-shadow: 0 5px 15px rgba(58, 46, 31, 0.1);
 }
 
 .map-container iframe {
-    border: 2px solid rgba(139, 115, 85, 0.2);
+    border: 2px solid rgba(184, 155, 110, 0.3);
     border-radius: 10px;
 }
 
 .reservation-form {
     padding: 40px;
-    border: 2px solid rgba(139, 115, 85, 0.2);
+    border: 2px solid rgba(184, 155, 110, 0.3);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(58, 46, 31, 0.08);
 }
 
 .form-group {
@@ -553,16 +565,16 @@ model-viewer {
     display: block;
     margin-bottom: 8px;
     font-family: 'Playfair Display', serif;
-    color: #4a3c2a;
+    color: #3a2e1f;
     font-weight: 600;
 }
 
 .form-control {
     width: 100%;
     padding: 12px 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(74, 60, 42, 0.2);
-    color: #4a3c2a;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(93, 76, 52, 0.3);
+    color: #5d4c34;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     transition: border-color 0.3s ease;
@@ -571,19 +583,20 @@ model-viewer {
 
 .form-control:focus {
     outline: none;
-    border-color: #8b7355;
+    border-color: #b89b6e;
+    box-shadow: 0 0 0 3px rgba(184, 155, 110, 0.1);
 }
 
 .instagram-section {
     text-align: center;
     padding: 60px 0;
-    border-top: 2px solid rgba(74, 60, 42, 0.1);
-    background-color: rgba(237, 232, 221, 0.7);
+    border-top: 2px solid rgba(184, 155, 110, 0.2);
+    background-color: rgba(240, 235, 226, 0.7);
 }
 
 .instagram-icon {
     font-size: 4rem;
-    color: #8b7355;
+    color: #b89b6e;
     margin-bottom: 20px;
     transition: transform 0.5s ease;
 }
@@ -594,7 +607,7 @@ model-viewer {
 
 .instagram-link {
     display: inline-block;
-    color: #4a3c2a;
+    color: #3a2e1f;
     text-decoration: none;
     font-size: 1.2rem;
     margin-top: 15px;
@@ -603,7 +616,7 @@ model-viewer {
 }
 
 .instagram-link:hover {
-    color: #8b7355;
+    color: #b89b6e;
 }
 
 /* ====== MODAL FOR 3D VIEWER ====== */
@@ -614,7 +627,7 @@ model-viewer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(74, 60, 42, 0.95);
+    background-color: rgba(58, 46, 31, 0.95);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -630,14 +643,15 @@ model-viewer {
 .model-modal model-viewer {
     width: 100%;
     height: 100%;
-    background-color: #f5f1e8;
+    background-color: #f8f5f0;
+    border-radius: 10px;
 }
 
 .close-modal {
     position: absolute;
     top: -50px;
     right: 0;
-    color: #f5f1e8;
+    color: #f8f5f0;
     font-size: 2.5rem;
     cursor: pointer;
     z-index: 2001;
@@ -647,12 +661,12 @@ model-viewer {
 }
 
 .close-modal:hover {
-    color: #8b7355;
+    color: #b89b6e;
 }
 
 /* ====== UTILITY CLASSES ====== */
 .text-gold {
-    color: #8b7355;
+    color: #b89b6e !important;
 }
 
 .text-center {
@@ -666,8 +680,16 @@ model-viewer {
 .divider {
     width: 120px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #8b7355, transparent);
+    background: linear-gradient(90deg, transparent, #b89b6e, transparent);
     margin: 30px auto;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f8f5f0;
+    border-top: 2px solid rgba(184, 155, 110, 0.2);
 }
 
 /* ====== RESPONSIVE STYLES ====== */
@@ -812,6 +834,11 @@ model-viewer {
         padding: 25px;
     }
     
+    .info-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
     .model-modal-content {
         width: 100%;
         height: 70%;
@@ -837,5 +864,9 @@ model-viewer {
     
     .category-btn {
         width: 200px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }

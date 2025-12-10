@@ -365,6 +365,14 @@ footer {
     border-bottom: 1px solid rgba(184, 155, 110, 0.2);
 }
 
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
 .about-img {
     width: 100%;
     height: 300px;
@@ -382,10 +390,13 @@ footer {
 
 /* ====== FEATURES - MOBILE FIRST ====== */
 .features {
+    padding: 60px 20px;
+}
+
+.features .container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 60px 20px;
 }
 
 .feature {
@@ -724,7 +735,8 @@ select.form-control {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(58, 46, 31, 0.98);
+    /* DARK GREY BACKGROUND */
+    background-color: rgba(30, 30, 30, 0.95);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -736,12 +748,16 @@ select.form-control {
     height: 70vh;
     position: relative;
     max-width: 800px;
+    background-color: #1e1e1e; /* Dark grey background for modal content */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .model-modal model-viewer {
     width: 100%;
     height: 100%;
-    background-color: #f8f5f0;
+    /* DARK GREY BACKGROUND FOR 3D VIEWER */
+    background-color: #1e1e1e;
     border-radius: 10px;
 }
 
@@ -894,19 +910,32 @@ select.form-control {
         max-width: 600px;
     }
     
-    .about {
+    /* About section - desktop layout */
+    .about .container {
         flex-direction: row;
         gap: 60px;
+    }
+    
+    .about {
         padding: 80px 30px;
     }
     
     .about-img {
         height: 400px;
+        width: 50%;
+    }
+    
+    .about-content {
+        width: 50%;
+    }
+    
+    /* Features - desktop layout */
+    .features .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
     
     .features {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
         padding: 80px 30px;
     }
     
@@ -947,6 +976,15 @@ select.form-control {
     
     nav ul {
         gap: 40px;
+    }
+    
+    /* Modal close button adjustment for desktop */
+    .close-modal {
+        top: -50px;
+        right: -50px;
+        color: #f8f5f0;
+        background-color: rgba(30, 30, 30, 0.8);
+        border-radius: 50%;
     }
 }
 
@@ -993,6 +1031,7 @@ select.form-control {
     
     .close-modal {
         top: -50px;
+        right: -50px;
     }
 }
 
